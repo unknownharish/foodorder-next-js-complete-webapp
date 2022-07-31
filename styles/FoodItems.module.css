@@ -1,0 +1,33 @@
+.fooditems {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2vh 9vw;
+}
+
+
+@media (min-width:320px) and (max-width:500px) {
+    
+    .fooditems{
+        margin: 2vh 2vw;
+    
+    }
+}
+
+@media (min-width:500px) and (max-width:900px) {
+    
+    
+    .fooditems{
+        margin: 2vh 0vw;
+    
+    }
+    
+    
+}
+
+@media (min-width:900px) and (max-width:1600px) {
+    
+    .fooditems{
+        margin: 2vh 1vw;
+    
+    }
+}

@@ -1,0 +1,184 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    flex: 2;
+    background-color: #d0d095;
+    padding: 10vh 1vw;
+}
+
+.status {
+    margin: 15vh 2vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.done {
+    opacity: 1;
+}
+
+.pending {
+    opacity: 0.3;
+}
+
+.animate {
+    font-weight: bold;
+    animation: hollow 0.9s ease-in-out infinite alternate;
+}
+
+@keyframes hollow {
+    0% {
+        opacity: 0.5;
+
+    }
+
+    100% {
+
+        opacity: 1;
+    }
+}
+
+
+.head {
+    margin: 10vw 5vw;
+    font-weight: bold;
+    font-size: 20px
+}
+
+.row {
+    margin: 5vh 5vw;
+
+}
+
+
+.mid {
+    flex: 0.5;
+    font-size: 20px;
+    background-color: #d0d095;
+    padding-top: 6.3vh;
+    padding-left: 1vh;
+    display: block;
+
+}
+
+.amount {
+    margin-top: -2vh;
+    font-weight: bold;
+}
+
+.address {
+    display: flex;
+    justify-content: space-around;
+    margin: 2vh 0;
+    font-weight: bold;
+}
+
+.order {
+    margin-left: -10px;
+}
+
+.addressInfo {
+    display: flex;
+    justify-content: space-around;
+    margin: 2vh 0;
+}
+
+.right {
+    /* background-color: rgb(99, 88, 73); */
+    flex: 1;
+    background-color: #e8e85d;
+    height: 40vh;
+    min-width: 20%;
+    margin: 5vh;
+    color: black;
+
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div {
+    display: flex;
+}
+
+.key {
+    font-weight: 900;
+    margin-right: 50px;
+}
+
+
+
+.total {
+    font-weight: 900;
+    margin-right: 75px;
+}
+
+.proceed {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(90, 145, 71);
+    border: none;
+    width: 18vw;
+    height: 7vh;
+    cursor: not-allowed;
+    border-radius: 2px;
+}
+
+@media (min-width:320px) and (max-width:460px) {
+    .container {
+        overflow: hidden;
+        height: 126vh;
+    }
+
+    .left {
+        font-size: 11px;
+        height: 54vh;
+    }
+
+    .mid {
+        display: none;
+    }
+
+    .right {
+        height: 42vh;
+        margin: -32vh 5vh;
+    }
+
+    .proceed {
+        width: 24vw;
+    }
+
+    .head {
+        font-size: 13px;
+    }
+}
+
+
+@media (min-width:461px) and (max-width:1020px) {
+
+    .head {
+        font-size: 13px;
+    }
+
+    .row {
+        font-size: 11px;
+    }
+
+    .right {
+        min-width: 33%;
+        height: 42vh;
+    }
+    
+    .mid {
+        display: none;
+    }
+}

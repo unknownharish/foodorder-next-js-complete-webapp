@@ -1,0 +1,55 @@
+.parent{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 10px; 
+}
+.footer{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+
+.contact{
+    display: flex;;
+    flex-direction:column;
+}
+
+
+.para{
+    font-weight: bold;
+
+}
+
+.message{
+    font-size: 50px;
+}
+
+@media (min-width:320px) and (max-width:500px) {
+    .parent{
+        font-size: 10px;
+    }
+    .message{
+        font-size: 20px;
+    }
+    
+    
+}
+
+@media (min-width:500px) and (max-width:900px) {
+    
+    .parent{
+        font-size: 15px;
+    }
+    
+    .message{
+        font-size: 20px;
+    }
+
+}
