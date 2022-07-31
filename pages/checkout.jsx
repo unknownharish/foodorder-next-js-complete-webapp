@@ -1,7 +1,7 @@
 import styles from '/styles/Checkout.module.css'
 
 import { useState } from 'react'
-import Checkout_Item_list from '../components/Checkout_Item_list'
+import Checkout_Item_list from '../components/Checkout_item_list'
 
 export default function checkout() {
 

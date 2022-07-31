@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
+
 import styles from '/styles/Checkout.module.css'
 
 
@@ -15,6 +16,8 @@ export default function Checkout_Item_list() {
         size:'medium',
         qty:2
     })
+
+  
 
     return (
         <div className={styles.itemlist}>
