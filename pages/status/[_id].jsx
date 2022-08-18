@@ -9,13 +9,7 @@ export default function Status({ data }) {
 
   // console.log(data);
 
-  if (data.error) {
-    return <>
-      <div style={{ height: '78vh' }}>
-        <h1 style={{ textAlign: 'center' }}>Invalid details</h1>
-      </div>
-    </>
-  }
+
 
   const [active, setactive] = useState({
     done: 'done',
@@ -59,12 +53,21 @@ export default function Status({ data }) {
     if (type === active.done) return styles.done
     if (type === active.animate) return styles.animate
     if (type === active.pending) return styles.pending
- 
+
 
 
 
   }
 
+
+  if (data.error) {
+    return <>
+      <div style={{ height: '78vh' }}>
+        <h1 style={{ textAlign: 'center' }}>Invalid details</h1>
+      </div>
+    </>
+  }
+  
   return (
     <div className={styles.container}>
 

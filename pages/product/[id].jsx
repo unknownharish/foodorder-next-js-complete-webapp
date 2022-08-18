@@ -12,15 +12,11 @@ export default function Fooddisplay(props) {
 
     let user = useSelector(x => x.user);
     let dispatch = useDispatch();
-    // console.log('from props', props);
+    console.log('from props', props);
 
-    if (props.response.error) {
-        return <h2 style={{ "height": "78vh" }}>No data found go to home page</h2>
-    }
 
-    const [productdesc, setproductdesc] = useState({})
 
-    setproductdesc({
+    const [productdesc, setproductdesc] = useState({
         _id: props.response._id,
         price: {
             0: props.response.price[0],
@@ -47,9 +43,7 @@ export default function Fooddisplay(props) {
 
 
 
-    let [price, setprice] = useState({})    // calculated price include extras + no of qty
-    setprice({ size: 'small', price: productdesc.price[0] })
-    
+    let [price, setprice] = useState({ size: 'small', price: productdesc.price[0] })    // calculated price include extras + no of qty
     const [qty, setqty] = useState(1)
 
 
@@ -93,6 +87,9 @@ export default function Fooddisplay(props) {
         return `${src}`
     }
 
+    if (props.response.error) {
+        return <h2 style={{ "height": "78vh" }}>No data found go to home page</h2>
+    }
 
     return (
         <>
