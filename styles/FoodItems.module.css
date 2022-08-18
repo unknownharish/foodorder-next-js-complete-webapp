@@ -1,33 +1,40 @@
 .fooditems {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin: 2vh 9vw;
 }
 
 
 @media (min-width:320px) and (max-width:500px) {
-    
-    .fooditems{
+
+    .fooditems {
         margin: 2vh 2vw;
-    
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
     }
 }
 
 @media (min-width:500px) and (max-width:900px) {
-    
-    
-    .fooditems{
+
+
+    .fooditems {
         margin: 2vh 0vw;
-    
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
     }
-    
-    
+
+
 }
 
 @media (min-width:900px) and (max-width:1600px) {
-    
-    .fooditems{
+
+    .fooditems {
         margin: 2vh 1vw;
-    
+
     }
 }

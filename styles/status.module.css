@@ -1,11 +1,15 @@
 .container {
     display: flex;
     flex-wrap: wrap;
+    background-image: url("../public/img/background4.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 .left {
     flex: 2;
-    background-color: #d0d095;
+    /* background-color: #d0d095; */
     padding: 10vh 1vw;
 }
 
@@ -14,6 +18,7 @@
     height: 20vh;
     display: flex;
     justify-content: space-around;
+
 }
 
 .done {
@@ -74,6 +79,7 @@
     justify-content: space-around;
     margin: 2vh 0;
     font-weight: bold;
+    font-size: 13px;
 }
 
 .order {
@@ -89,11 +95,12 @@
 .right {
     /* background-color: rgb(99, 88, 73); */
     flex: 1;
-    background-color: #e8e85d;
-    height: 40vh;
+    background-color: #bbbb6f;
+    height: 44vh;
     min-width: 20%;
     margin: 5vh;
     color: black;
+    opacity: 0.9;
 
 }
 
@@ -136,12 +143,14 @@
 @media (min-width:320px) and (max-width:460px) {
     .container {
         overflow: hidden;
-        height: 126vh;
+        height: 114vh;
     }
 
     .left {
         font-size: 11px;
         height: 54vh;
+        padding: 10vh 0vw;
+        margin: 0 -5vw;
     }
 
     .mid {
@@ -150,35 +159,74 @@
 
     .right {
         height: 42vh;
-        margin: -32vh 5vh;
+        margin: -26vh 5vh;
     }
 
     .proceed {
-        width: 24vw;
+        width: 50vw;
     }
 
     .head {
         font-size: 13px;
     }
+
+    .address {
+        display: flex;
+        justify-content: space-around;
+        margin: 2vh 0;
+        font-size: 11px;
+        height: 5vh;
+        overflow-y: scroll;
+        word-wrap: break-word;
+    }
+
+    .row {
+        display: inline-block;
+        width: 36%;
+        overflow: hidden;
+    }
+
+    .status {
+        margin: 7vh 2vw;
+    }
 }
 
 
-@media (min-width:461px) and (max-width:1020px) {
+@media (min-width:461px) and (max-width:950px) {
 
     .head {
         font-size: 13px;
     }
 
     .row {
+        display: inline-block;
+        width: 36%;
+        overflow: hidden;
         font-size: 11px;
+    }
+
+    .address {
+        height: 5vh;
+        overflow-y: scroll;
+        word-wrap: break-word;
+    }
+
+    .left {
+        color: black;
+        font-weight: bold;
     }
 
     .right {
         min-width: 33%;
         height: 42vh;
     }
-    
+
     .mid {
         display: none;
     }
+
+    .proceed {
+        width: 40vw;
+    }
+
 }

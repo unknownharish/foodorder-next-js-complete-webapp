@@ -82,18 +82,22 @@ export default function status() {
                     <div className={returnClass('done')}>
                         <Image src={images.payment} height='30' width={30} />
                         <p>Paid</p>
-                    </div>
-                    <div className={returnClass('done')}>
-                        <Image src={images.cook} height='30' width={30} />
-                        <p>Preparing</p>
+                        <Image src={'/img/greencheck.svg'} height='30' width={33} />
                     </div>
                     <div className={returnClass('active')}>
+                        <Image src={images.cook} height='30' width={30} />
+                        <p>Preparing</p>
+                        <Image src={'/img/greencheck.svg'} height='30' width={33} />
+                    </div>
+                    <div className={returnClass('pending')}>
                         <Image src={images.deliver} height='30' width={30} />
                         <p>On the way</p>
+                        <Image src={'/img/greencheck.svg'} height='30' width={33} />
                     </div>
                     <div className={returnClass('pending')}>
                         <Image src={images.done} height='30' width={30} />
                         <p>Delivered</p>
+                        <Image src={'/img/greencheck.svg'} height='30' width={33} />
                     </div>
 
                 </div>

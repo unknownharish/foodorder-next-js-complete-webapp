@@ -1,0 +1,237 @@
+.admin {
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+
+
+.left {
+    height: 50vh;
+    width: 40%;
+    /* background-color: rgb(144, 212, 66); */
+    margin: 5vh 0;
+    overflow-y: scroll;
+    padding: 5px;
+    border: 2px solid black;
+
+}
+
+.productRender {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2vh 0;
+}
+
+.singleProductRender {
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1vh 0;
+}
+
+.viewButton {
+    padding: 7px 10px;
+    background-color: #e91b34;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #e91b34;
+    color: white;
+}
+
+.viewButton:hover {
+    border: 2px solid #8a46ff;
+}
+
+.editButton {
+    padding: 7px 10px;
+    background-color: #8a817c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #8a817c;
+    color: white;
+}
+
+.editButton:hover {
+    border: 2px solid #8a46ff;
+}
+
+.right {
+    height: 50vh;
+    width: 40%;
+    /* background-color: rgb(180, 82, 82); */
+    margin: 5vh 0;
+    padding: 5px;
+    /* border: 2px solid #8a817c; */
+
+
+}
+
+.orderRender {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2vh 0;
+}
+
+.singleOrderRender {
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 2vh 0;
+    flex-wrap: wrap;
+}
+
+.updateButton {
+    padding: 7px;
+    background-color: #66bd69;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #66bd69;
+}
+
+.updateButton:hover {
+    border: 2px solid #8a46ff;
+}
+
+.cancelButton {
+    padding: 7px;
+    background-color: #e91b34;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #e91b34;
+}
+
+.cancelButton:hover {
+    border: 2px solid #8a46ff;
+}
+
+.rightButtons {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    height: 5vh;
+}
+
+.addnewProduct {
+    padding: 15px;
+    margin-left: 10vh;
+    margin-bottom: 1vh;
+    cursor: pointer;
+    background-color: #363946;
+    color: white;
+    border-radius: 8px;
+    border: 2px solid #363946;
+    margin-top: 5vh;
+}
+
+.addnewProduct:hover {
+    border: 2px solid #241a35;
+
+}
+
+@media (min-width:320px) and (max-width:460px) {
+
+    .left,
+    .right {
+        width: 90%;
+        font-size: 13px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+    }
+
+    .productRender {
+        width: 100%;
+        margin: 10vh 0;
+    }
+
+    .editButton,
+    .viewButton,
+    .updateButton,
+    .cancelButton {
+        padding: 5px;
+        margin-left: 2vw;
+    }
+
+    .singleOrderRender {
+        margin: 3vh 0;
+        border: 1px solid black;
+        height: 8vh;
+    }
+
+    .rightButtons {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .leftHeading,
+    .rightHeading {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+
+
+
+}
+
+
+@media (min-width:461px) and (max-width:1020px) {
+
+
+    .left,
+    .right {
+        width: 60%;
+        font-size: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+    }
+
+    .productRender {
+        width: 100%;
+        margin: 5vh 0;
+    }
+
+    .editButton,
+    .viewButton,
+    .updateButton,
+    .cancelButton {
+        padding: 7px;
+        margin-left: 2vw;
+    }
+
+    .singleOrderRender {
+        margin: 3vh 0;
+        font-size: 15px;
+        border: 1px solid black;
+        height: 11vh;
+    }
+
+    .rightButtons {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .leftHeading,
+    .rightHeading {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+}

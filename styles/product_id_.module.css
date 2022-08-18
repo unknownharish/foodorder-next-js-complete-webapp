@@ -2,10 +2,16 @@
     min-height: 88vh;
     display: flex;
     flex-wrap: wrap;
+    background-image: url("../public/img/background3.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* color: white; */
+
 }
 
 .left {
     margin: 5vh;
+    margin-top: 10vh;
 
 }
 
@@ -63,7 +69,7 @@
     font-weight: bold;
     font-size: 18px;
     color: rgb(21, 20, 20);
-    background-color: rgb(90, 145, 71);
+    background-color: #FFC23C;
     border: none;
     width: 50%;
     height: 7vh;

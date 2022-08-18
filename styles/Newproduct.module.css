@@ -1,0 +1,157 @@
+.NewProduct {
+    height: 65vh;
+    width: 35vw;
+    background-color: #ceb3c9;
+    position: absolute;
+    z-index: 5;
+    top: 18%;
+    left: 32%;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: scroll;
+    scrollbar-color: #d7a81b #53d253;
+
+}
+
+.cross {
+    position: absolute;
+    top: 1%;
+    left: 86%;
+    cursor: pointer;
+    width: 12%;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userdetails {
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    height: 4vh;
+    padding: 16px 16px;
+    border: 1px solid rgb(208, 207, 118);
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 9px;
+
+}
+
+
+.input:focus {
+    border-bottom: 1px solid black;
+    transition: all 0.3s ease-in-out;
+}
+
+.textarea {
+    height: 8vh;
+    width: 113%;
+    margin-left: -15px;
+    padding: 16px 16px;
+    border: 1px solid rgb(208, 207, 118);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    border-radius: 9px;
+
+
+}
+
+.textarea:focus {
+    border-bottom: 1px solid black;
+    transition: all 0.3s ease-in-out;
+}
+
+.addextras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addextrasInput {
+    width: 25%;
+    height: 4vh;
+    padding: 16px 12px;
+    border: 1px solid rgb(208, 207, 118);
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 9px;
+    margin: 1vh;
+}
+
+.addextrasInput:focus {
+    border-bottom: 1px solid black;
+    transition: all 0.3s ease-in-out;
+}
+
+.addIt{
+    padding: 9px;
+    cursor: pointer;
+    background: #8dd084;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.add {
+    cursor: pointer;
+}
+
+.extrasValue{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.value{
+    padding: 5px;
+    background-color: rgb(237, 101, 78);
+    margin: 1vh 0.5vw;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.create{
+    cursor: pointer;
+    padding: 7px 10px;
+    background-color:rgb(38, 149, 45);
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin:2vh 0;
+    
+}
+
+@media (min-width:320px) and (max-width:460px) {
+
+.NewProduct{
+    width: 90%;
+    left: 5%;
+    top: 17%;
+    
+}
+
+}
+
+@media (min-width:461px) and (max-width:1020px) {
+    
+    .NewProduct{
+        width: 70%;
+        left: 15%;
+        top: 17%;
+        
+    }
+    .cross{
+        width: 7%;
+    }
+}

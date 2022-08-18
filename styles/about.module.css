@@ -1,0 +1,25 @@
+.about{
+  min-height: 88vh;
+ 
+}
+
+.image{
+    padding:8vh ;
+    margin: 2vh 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.para{
+    margin-left: 2vh;
+}
+
+@media (min-width:320px) and (max-width:460px) {
+
+
+.image{
+    padding: 0;
+font-size: 12px;
+}
+}

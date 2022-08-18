@@ -5,15 +5,22 @@
     align-items: center;
     /* background-color: red; */
     width: 50vw;
-} 
+    color: white;
+    /* font-size: 20px; */
+    font-weight: 500;
+}
 
 .itemimage {
     border-radius: 50%;
 }
 
 .iteminfo {
-    font-size: 15px;
-    font-weight: initial;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.font{
+    font-weight: bold;
 }
 
 .delete {
@@ -24,6 +31,7 @@
 .delete:hover {
     transform: scale(1.1) rotate(120deg);
     transition: all 0.7s ease-in-out;
+    color: red !important;
 }
 
 
@@ -32,21 +40,27 @@
     min-height: 80vh;
     width: 100%;
     flex-wrap: wrap;
+    background-image: url("../public/img/background2.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .left {
     margin-left: 5vw;
     margin-right: 10vw;
+    /* flex: 2; */
 }
 
 .right {
     /* background-color: rgb(99, 88, 73); */
-    background-color: #e8e85d;
-    height: 42vh;
+    background-color: #c8c87f;
+    height: 45vh;
     min-width: 20%;
     margin: 5vh;
     color: black;
     flex: 1;
+    border-radius: 6px;
+    opacity: 0.9;
 
 }
 
@@ -77,45 +91,61 @@
     padding: 10px;
     font-weight: bold;
     font-size: 18px;
-    color: white;
-    background-color: rgb(90, 145, 71);
+    color: black;
+    background-color: #AEA272;
     border: none;
-    width: 18vw;
+    width: 85%;
     height: 7vh;
     cursor: pointer;
     border-radius: 2px;
+    margin-top: 6px;
+    text-transform: inherit;
+    letter-spacing: 0.2px;
+    transition: all 0.2s ease;
+}
+
+.proceed:hover{
+    background-color: #099709;
+    color:white;
+    transition: all 0.2s ease;
 }
 
 
 @media (min-width:320px) and (max-width:500px) {
 
-    .itemlist{
+    .itemlist {
         width: 83vw;
     }
-    .iteminfo{
+
+    .iteminfo {
         margin: 0 8px;
         font-size: 12px;
     }
-.delete{
-    transform: scale(1.1)   
-}
-.right{
-    flex: 1;
-    height: 42vh;
-}
-.proceed{
-    width: 50%;
-}
+
+    .delete {
+        transform: scale(1.1)
+    }
+
+    .right {
+       
+        height: 45vh;
+        width: 47%;
+    }
+
+    .proceed {
+        width: 50%;
+    }
 
 }
 
 @media (min-width:500px) and (max-width:900px) {
 
-    .itemlist{
+    .itemlist {
         width: 82vw;
     }
-    .right{
+
+    .right {
         flex: 0.5;
-        height: 42vh;
+        height: 45vh;
     }
 }
