@@ -12,7 +12,7 @@ export default function Fooddisplay(props) {
 
     let user = useSelector(x => x.user);
     let dispatch = useDispatch();
-    console.log('from props', props);
+    // console.log('from props', props);
 
     if (props.response.error) {
         return <h2 style={{ "height": "78vh" }}>No data found go to home page</h2>
