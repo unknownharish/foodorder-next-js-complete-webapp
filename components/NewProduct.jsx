@@ -63,7 +63,7 @@ export default function NewProduct({ setnewProductScreen }) {
 
         try {
 
-            dispatch(setLoading({value:true}))
+            dispatch(setLoading({ value: true }))
 
             let { data } = await axios.post('https://api.cloudinary.com/v1_1/din5l0kjn/image/upload', form)
             let URL = data.url;
@@ -85,15 +85,15 @@ export default function NewProduct({ setnewProductScreen }) {
                 setMedium('');
                 setLarge('');
                 setfinalExtras('');
-                dispatch(setLoading({value:false}))
+                dispatch(setLoading({ value: false }))
             }
             else {
                 alert('Server error !! Try again in 5 minutes')
-                dispatch(setLoading({value:false}))
+                dispatch(setLoading({ value: false }))
             }
         } catch (e) {
             console.log(e)
-            dispatch(setLoading({value:false}))
+            dispatch(setLoading({ value: false }))
         }
 
 
@@ -146,10 +146,10 @@ export default function NewProduct({ setnewProductScreen }) {
 
 
                 <div className={styles.extrasValue}>
-                    {finalExtras.length > 0 ? finalExtras.map(x => {
+                    {finalExtras.length > 0 ? finalExtras.map((x, idx) => {
 
                         // console.log('mapping', x);
-                        return <div>
+                        return <div key={idx}>
                             <span className={styles.value}>{x.text + ' ' + x.price}</span>
 
                         </div>

@@ -18,7 +18,9 @@ export default function Fooddisplay(props) {
         return <h2 style={{ "height": "78vh" }}>No data found go to home page</h2>
     }
 
-    const [productdesc, setproductdesc] = useState({
+    const [productdesc, setproductdesc] = useState({})
+
+    setproductdesc({
         _id: props.response._id,
         price: {
             0: props.response.price[0],
@@ -45,7 +47,9 @@ export default function Fooddisplay(props) {
 
 
 
-    let [price, setprice] = useState({ size: 'small', price: productdesc.price[0] })    // calculated price include extras + no of qty
+    let [price, setprice] = useState({})    // calculated price include extras + no of qty
+    setprice({ size: 'small', price: productdesc.price[0] })
+    
     const [qty, setqty] = useState(1)
 
 
@@ -54,10 +58,10 @@ export default function Fooddisplay(props) {
 
         if (e.target.checked) {
 
-            setprice({size:price.size,price:price.price + parseInt(e.target.value)})
+            setprice({ size: price.size, price: price.price + parseInt(e.target.value) })
         }
         else {
-            setprice({size:price.size,price:price.price - parseInt(e.target.value)})
+            setprice({ size: price.size, price: price.price - parseInt(e.target.value) })
             // setprice(price.price - parseInt(e.target.value))
 
         }
@@ -72,7 +76,7 @@ export default function Fooddisplay(props) {
             _id: productdesc._id,
             name: productdesc.name,
             desc: productdesc.desc,
-            img:productdesc.image,
+            img: productdesc.image,
             price: price.price,
             qty: parseInt(qty),
             size: price.size

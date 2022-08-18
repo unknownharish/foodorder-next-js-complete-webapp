@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styles from '/styles/login.module.css'
 import { useRouter } from 'next/router'
 
-export default function login() {
+export default function Login() {
 
     const [name, setname] = useState('')
     const [Pass, setPass] = useState('')

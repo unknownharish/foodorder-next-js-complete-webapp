@@ -3,7 +3,7 @@ import { useState } from 'react'
 import styles from '/styles/status.module.css'
 
 
-export default function status() {
+export default function Status() {
 
 
     const [active, setactive] = useState({

@@ -9,7 +9,7 @@ import NewProduct from '../components/NewProduct'
 import { setTotalOrders } from '../REDUX/createSlice';
 import { useDispatch, useSelector } from 'react-redux'
 
-export default function admin({ totalProducts, totalOrders }) {
+export default function Admin({ totalProducts, totalOrders }) {
 
     let dispatch = useDispatch();
     let state = useSelector(x => x.user)
@@ -86,23 +86,23 @@ export default function admin({ totalProducts, totalOrders }) {
 
                     <h3 className={styles.rightHeading + ' ' + 'mx-3 my-2'}>Food Lists</h3>
                     <div className={styles.productRender}>
-                        {totalProducts.map(x => {
+                        {totalProducts.map((x, idx) => {
                             // console.log(x);
                             const myLoader = ({ src, width, quality }) => {
                                 return `${src}`
                             }
-                            return <>
-                                <div className={styles.singleProductRender}>
-                                    <Image loader={myLoader} src={x.img} height={20} width={40} />
-                                    <p>{x.name.slice(0, 5) + '..'}</p>
+                            return
+                            <div key={idx} className={styles.singleProductRender}>
+                                <Image loader={myLoader} src={x.img} height={20} width={40} />
+                                <p>{x.name.slice(0, 5) + '..'}</p>
 
-                                    <input type="button" className={styles.editButton} title='Update details' value="Update" />
-                                    <input type="button" className={styles.viewButton} title='delete this product' value="Delete" />
+                                <input type="button" className={styles.editButton} title='Update details' value="Update" />
+                                <input type="button" className={styles.viewButton} title='delete this product' value="Delete" />
 
-                                </div>
+                            </div>
 
 
-                            </>
+
                         })}
 
                     </div>
@@ -114,10 +114,10 @@ export default function admin({ totalProducts, totalOrders }) {
                 <div className={styles.right}>
                     <div className={styles.orderRender}>
                         <h3 className={styles.rightHeading + ' ' + 'mx-3 my-2'}>Order Status</h3>
-                        {Orders.map(x => {
+                        {Orders.map((x, idx) => {
                             // console.log('rendering data ', x);
 
-                            return <div className={styles.singleOrderRender}>
+                            return <div key={idx} className={styles.singleOrderRender}>
                                 <p style={{ textTransform: 'capitalize' }}>{x.customer.slice(0, 6)}</p>
                                 <p style={{ width: '10vh' }}>{orderStatus[x.status]}</p>
                                 <p>{x.total}</p>
@@ -147,12 +147,12 @@ export default function admin({ totalProducts, totalOrders }) {
 export async function getServerSideProps(context) {
 
     let cookies = context.req?.cookies || ''
-   
+
     if (process.env.secret != cookies.token) {
         return {
-            redirect:{
-                destination:'/login',
-                permanent:true
+            redirect: {
+                destination: '/login',
+                permanent: true
             }
         }
     }

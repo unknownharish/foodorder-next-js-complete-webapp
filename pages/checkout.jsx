@@ -13,7 +13,7 @@ import Stripe_modal from '../components/Stripe_modal'
 
 let stripeKey = loadStripe('pk_test_51LTSslSEk3EtKCobY7RUgLOMoRwR0BxPcbOXT2Twi21qYi1FK0md0xlMU8fMCz3tFlkMP9SgSE6pzWF0mUzKSbqd00Tbp7vtiP')
 
-export default function checkout() {
+export default function Checkout() {
 
   const [cardPayment, setcardPayment] = useState(false)
   // redux store 
