@@ -71,19 +71,19 @@ export default function Header() {
 
                 <div className={styles.links}>
                     <Link href='/' >
-                        <a>Home</a>
+                        Home
 
                     </Link>
                 </div>
                 <div className={styles.links}>
                     <Link href='/about' >
-                        <a>About</a>
+                        About
 
                     </Link>
                 </div>
                 <div className={styles.links}>
                     <Link href='/contact' >
-                        <a>Contact</a>
+                        Contact
 
                     </Link>
                 </div>

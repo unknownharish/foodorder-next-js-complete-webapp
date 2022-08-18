@@ -91,15 +91,15 @@ export default function Admin({ totalProducts, totalOrders }) {
                             const myLoader = ({ src, width, quality }) => {
                                 return `${src}`
                             }
-                            return
-                            <div key={idx} className={styles.singleProductRender}>
-                                <Image loader={myLoader} src={x.img} height={20} width={40} />
-                                <p>{x.name.slice(0, 5) + '..'}</p>
+                            return (
+                                <div key={idx} className={styles.singleProductRender}>
+                                    <Image loader={myLoader} src={x.img} height={20} width={40} />
+                                    <p>{x.name.slice(0, 5) + '..'}</p>
 
-                                <input type="button" className={styles.editButton} title='Update details' value="Update" />
-                                <input type="button" className={styles.viewButton} title='delete this product' value="Delete" />
+                                    <input type="button" className={styles.editButton} title='Update details' value="Update" />
+                                    <input type="button" className={styles.viewButton} title='delete this product' value="Delete" />
 
-                            </div>
+                                </div>)
 
 
 
