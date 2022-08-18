@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import styles from '/styles/status.module.css'
 
 
-export default function status({ data }) {
+export default function Status({ data }) {
 
 
   // console.log(data);

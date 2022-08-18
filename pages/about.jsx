@@ -3,7 +3,7 @@ import React from 'react'
 import styles from '/styles/about.module.css'
 
 
-export default function about() {
+export default function About() {
     return (
         <div className={styles.about}>
             <div className={styles.image}>
