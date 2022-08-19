@@ -66,7 +66,7 @@ export default function NewProduct({ setnewProductScreen }) {
             dispatch(setLoading({ value: true }))
 
             let { data } = await axios.post('https://api.cloudinary.com/v1_1/din5l0kjn/image/upload', form)
-            let URL = data.url;
+            let URL = data.secure_url;
 
             let finalPass = {
                 name,
