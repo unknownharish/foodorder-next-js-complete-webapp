@@ -1,8 +1,10 @@
 import { order } from '../../../MongoDB/modals/order'
-
+import { connect } from '../../../MongoDB/connect';
 
 export default async function handler(req, res) {
 
+
+   await  connect()
 
     if (req.method == 'GET') {
         try {

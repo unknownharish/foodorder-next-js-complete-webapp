@@ -3,7 +3,7 @@ import { product } from '../../../MongoDB/modals/product'
 
 export default async function handler(req, res) {
 
-    connect()
+   await connect()
 
     try {
 
