@@ -129,7 +129,7 @@ export default function Fooddisplay(props) {
 
 
                     <div>
-                        <input className={styles.quantity} type="number" min={1} id="" value={qty} onChange={(e) => setqty(e.target.value)} />
+                        <input className={styles.quantity} type="number" min={1} id="" max={15} value={qty} onChange={(e) => setqty(e.target.value)} />
                     </div>
 
 
