@@ -14,14 +14,14 @@ export default function Home(props) {
 
   return (
     <div className={styles.container}>
-      {/* <Head>
+      <Head>
         <title> Food ordering App</title>
         <meta name="description" content="developed with next.js this a a food ordering app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Caresoul />
-      <FoodItems foodlist={props.foodlist} /> */}
+      <FoodItems foodlist={props.foodlist} />
 
 
     </div>
@@ -30,10 +30,25 @@ export default function Home(props) {
 
 export async function getServerSideProps() {
 
-  return {
-    redirect: {
-      destination: '/Home',
-      permanent: true
+  try {
+
+
+    let response = await axios.get('http://localhost:3000/api/product');
+    // console.log(response);
+
+
+    return {
+      props: {
+        foodlist: response.data
+      }
+    }
+
+  } catch (error) {
+    console.log(error)
+    return {
+      props: {
+        foodlist: []
+      }
     }
   }
 }

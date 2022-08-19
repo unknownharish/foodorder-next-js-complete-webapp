@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
         if (process.env.username == username && process.env.password == password) {
 
-            res.setHeader('Set-Cookie', cookie.serialize('token', process.env.secret, { maxAge: 1000 * 60 * 60, path: '/' }))
+            res.setHeader('Set-Cookie', cookie.serialize('token', process.env.secret, { maxAge: 60 * 60, path: '/' }))
 
             
 

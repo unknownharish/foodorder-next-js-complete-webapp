@@ -3,7 +3,7 @@ import Foodcard from './Foodcard'
 
 export default function FoodItems({ foodlist }) {
 
-    console.log(foodlist)
+    // console.log(foodlist)
     return (
 
         <>
