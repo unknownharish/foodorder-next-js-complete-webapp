@@ -14,7 +14,7 @@ export default function Login() {
 
     let makeLogin = async () => {
 
-        let data = await axios.post('http://localhost:3000/api/login', { username: name, password: Pass })
+        let data = await axios.post('https://foodorder.vercel.app/api/login', { username: name, password: Pass })
 
         // console.log(data.data);
 
