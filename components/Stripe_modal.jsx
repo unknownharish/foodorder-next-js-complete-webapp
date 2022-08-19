@@ -91,7 +91,7 @@ export default function Stripe_modal({ setcardPayment }) {
 
 
                     // creating client secret by backend
-                    let { data } = await axios.post('https://foodorder.vercel.app/api/stripe', {
+                    let { data } = await axios.post('https://myfoodorder.vercel.app.app/api/stripe', {
                         id: paymentMethod.id,
                         amount: total_amount,
                         currency: 'inr',
@@ -120,7 +120,7 @@ export default function Stripe_modal({ setcardPayment }) {
                     // if not hava error then save user details
 
 
-                    let orderSave = await axios.post('https://foodorder.vercel.app/api/order', {
+                    let orderSave = await axios.post('https://myfoodorder.vercel.app/api/order', {
                         customer: name,
                         address: address,
                         total: total_amount,
@@ -168,7 +168,7 @@ export default function Stripe_modal({ setcardPayment }) {
 
             try {
 
-                let orderSave = await axios.post('https://foodorder.vercel.app/api/order', {
+                let orderSave = await axios.post('https://myfoodorder.vercel.app/api/order', {
                     customer: name,
                     address: address,
                     total: total_amount,
