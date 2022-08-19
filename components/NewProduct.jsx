@@ -75,7 +75,7 @@ export default function NewProduct({ setnewProductScreen }) {
                 price: [Small, Medium, Large],
                 extras: finalExtras
             }
-            let Product = await axios.post('http://localhost:3000/api/product', finalPass)
+            let Product = await axios.post('https://foodorder.vercel.app/api/product', finalPass)
 
             if (!Product.error) {
                 setname('');
