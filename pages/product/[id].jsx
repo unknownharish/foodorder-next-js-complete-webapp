@@ -176,7 +176,7 @@ export async function getServerSideProps(context) {
     let { params } = context;
     // console.log('in ssp ', params)
 
-    let res = await axios.get(`http://localhost:3000/api/product/${params.id}`)
+    let res = await axios.get(`https://foodorder.vercel.app/api/product/${params.id}`)
     // console.log(res);
 
 
