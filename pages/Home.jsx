@@ -33,7 +33,7 @@ export async function getServerSideProps() {
   try {
 
 
-    let response = await axios.get('http://localhost:3000/api/product');
+    let response = await axios.get('https://foodorder-eight.vercel.app/api/product');
     // console.log(response);
 
 
