@@ -37,7 +37,7 @@ export default function Admin({ totalProducts, totalOrders }) {
         let ORDER = Orders.filter(x => x._id == id)
         let newStatus = ((parseInt(ORDER['0'].status) + 1) % 4)
 
-        let { data } = await axios.put(`http://localhost:3000/api/order/${id}`, {
+        let { data } = await axios.put(`https://foodorder.vercel.app/api/order/${id}`, {
             status: newStatus
         })
         // console.log('response', data)
@@ -57,7 +57,7 @@ export default function Admin({ totalProducts, totalOrders }) {
 
         confirm('sure want to delete')
 
-        let { data } = await axios.delete(`http://localhost:3000/api/order`, {
+        let { data } = await axios.delete(`https://foodorder.vercel.app/api/order`, {
 
             data: { '_id': id }
 
