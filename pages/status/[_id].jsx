@@ -190,7 +190,7 @@ export async function getServerSideProps(context) {
 
   let { _id } = context.query
   console.log('ssp', _id)
-  let { data } = await axios.get(`https://foodorder.vercel.app/api/order/${_id}`)
+  let { data } = await axios.get(`https://myfoodorder.vercel.app/api/order/${_id}`)
   return {
     props: {
       data
