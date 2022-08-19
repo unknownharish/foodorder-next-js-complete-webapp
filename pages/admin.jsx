@@ -158,8 +158,8 @@ export async function getServerSideProps(context) {
     }
 
 
-    let totalProducts = await axios.get('http://localhost:3000/api/product');
-    let totalOrders = await axios.get('http://localhost:3000/api/order')
+    let totalProducts = await axios.get('https://foodorder.vercel.app/api/product');
+    let totalOrders = await axios.get('https://foodorder.vercel.app/api/order')
     // console.log(totalOrders.data);
     return {
         props: {
